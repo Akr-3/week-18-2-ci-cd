@@ -6,5 +6,6 @@ export default function() {
   const balance = useBalance();
   return <div>
     hi there {balance}
+    <div>This is test Home</div>
   </div>
 }
