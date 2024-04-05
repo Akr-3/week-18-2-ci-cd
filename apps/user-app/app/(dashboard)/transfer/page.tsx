@@ -4,6 +4,7 @@ import { BalanceCard } from "../../../components/BalanceCard";
 import { OnRampTransactions } from "../../../components/OnRampTransactions";
 import { getServerSession } from "next-auth";
 import { authOptions } from "../../lib/auth";
+import { SessionType } from "../../api/user/route";
 
 async function getBalance() {
     const session : SessionType | null = await getServerSession(authOptions);
@@ -59,15 +60,4 @@ export default async function () {
             </div>
         </div>
     );
-}
-
-export interface SessionType {
-    user?:
-        | {
-              name?: string | null | undefined;
-              email?: string | null | undefined;
-              image?: string | null | undefined;
-              id?: string | null | undefined;
-          }
-        | undefined;
 }
