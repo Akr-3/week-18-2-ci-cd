@@ -13,5 +13,9 @@
     },
     "prisma": {
         "seed": "ts-node prisma/seed.ts"
+    },
+    "scripts": {
+        "migrate" : "npx prisma migrate dev",
+        "db:generate" : "npx prisma generate"
     }
 }
